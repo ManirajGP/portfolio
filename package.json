@@ -1,0 +1,14 @@
+{
+  "name": "maniraj_portfolio",
+  "version": "1.0.0",
+  "description": "Interaction Designer & Developer",
+  "scripts": {
+    "start": "lite-server --baseDir=\"public\""
+  },
+  "keywords": ["Interaction Designer, UI, UX, Adobe CC, Figma, XD, Wordpress, Front End Developer"],
+  "author": "Maniraj G. Parthasarathy",
+  "license": "private",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

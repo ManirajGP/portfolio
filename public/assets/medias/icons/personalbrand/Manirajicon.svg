@@ -1,0 +1,80 @@
+<svg class="animated-svg" version="1.1" id="ManirajLogo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1303.9 1291.8" style="enable-background:new 0 0 1303.9 1291.8;" xml:space="preserve">
+  <style type="text/css">
+    .st0{fill:#FFC500;}
+    .st1{fill:#FFFFFF;}
+    .animated-svg #bg {
+      fill-opacity: 0;
+      stroke: #FFC600;
+      stroke-width: 25;
+      stroke-dasharray: 3260;
+      stroke-dashoffset: 2000;
+      animation: drawBg 3s ease forwards, fillColor 2s ease 3s forwards;
+    }
+
+    .animated-svg #grRounded1,
+    .animated-svg #grRounded2,
+    .animated-svg #grRounded3  {
+      fill-opacity: 0;
+      stroke: #FFC600;
+      stroke-width: 15;
+      stroke-dasharray: 2000;
+      stroke-dashoffset: 2000;
+      animation: drawRounded 3s ease forwards, fillWhite 2s ease 3s forwards;
+    }
+
+    @keyframes drawBg {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    @keyframes fillColor {
+      to {
+        fill-opacity: 1;
+      }
+    }
+
+    @keyframes drawRounded {
+      to {
+        opacity: 1;
+        stroke-dashoffset: 0;
+      }
+    }
+
+    @keyframes fillWhite {
+      to {
+        fill-opacity: 1;
+      }
+    }
+  </style>
+
+  <g class="animated-svg">
+    <path id="bg" class="st0" d="M1160.4,382.1V528c0,33.7-14,64-36.6,85.5l-453.1,442.1l-0.5,0.5l-3.8,3.7
+      c-55.5,53.4-131,86.2-214.1,86.2c-170.7,0-309-138.3-309-309V455c0-170.7,138.3-309,309-309c21.5,0,42.6,2.2,62.9,6.4l3.1,0.7
+      l547.5,113.3c23.2,4.7,44,16.2,60.1,32.3C1147.2,320,1160.4,349.5,1160.4,382.1z"/>
+    <path id="grRounded3" class="st1" d="M1115.3,410v90.2c0,40.3-32.7,73-72.9,73c-40.3,0-73-32.7-73-73V410c0-40.3,32.7-73,73-73
+      c20.1,0,38.4,8.2,51.6,21.4S1115.3,389.9,1115.3,410z"/>
+    <path id="grRounded2" class="st1" d="M924.4,455.1V601c0,65.2-52.8,118-118,118s-118-52.8-118-118V455.1c0-65.2,52.9-118,118-118
+      c32.6,0,62.1,13.2,83.5,34.6C911.2,393,924.4,422.5,924.4,455.1z"/>
+    <path id="grRounded1" class="st1" d="M643.2,528v236.1c0,105.5-85.5,191-191,191s-191-85.5-191-191V528c0-105.5,85.5-191,191-191
+      c52.7,0,100.5,21.4,135,55.9S643.2,475.3,643.2,528z"/>
+  </g>
+
+  <script>
+    function startAnimation() {
+      document.querySelectorAll('.animated-svg path').forEach(path => {
+        path.style.animation = 'none';
+        path.offsetHeight; /* trigger reflow */
+        path.style.animation = null;
+      });
+
+      document.querySelector('#bg').style.animation = 'drawBg 3s ease forwards, fillColor 2s ease 3s forwards';
+      document.querySelector('#grRounded1').style.animation = 'drawRounded 3s ease forwards, fillWhite 2s ease 3s forwards';
+      document.querySelector('#grRounded2').style.animation = 'drawRounded 3s ease forwards, fillWhite 2s ease 3s forwards';
+      document.querySelector('#grRounded3').style.animation = 'drawRounded 3s ease forwards, fillWhite 2s ease 3s forwards';
+    }
+
+    setInterval(startAnimation, 8000); // Repeat every 8 seconds
+    startAnimation(); // Start the animation immediately
+  </script>
+</svg>

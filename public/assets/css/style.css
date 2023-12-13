@@ -1,0 +1,62 @@
+h1, h2, h3, h4, h5, h6, p, small, strong, a, li, button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fc {
+    color: #333333;
+}
+
+.bg-glassy {
+    background: rgba(0, 0, 0, 0.75);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+/* BottomSVGiconCSS */
+#mblNavBtn{margin-top: -50px;}
+.st0{fill:#FFC500;}
+.st1{fill:#FFFFFF;}
+.animated-svg #bg {
+    fill-opacity: 0;
+    stroke: #FFC600;
+    stroke-width: 25;
+    stroke-dasharray: 3260;
+    stroke-dashoffset: 2000;
+}
+
+.animated-svg #grRounded1,
+.animated-svg #grRounded2,
+.animated-svg #grRounded3  {
+    fill-opacity: 0;
+    stroke: #FFC600;
+    stroke-width: 10;
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+}
+
+@keyframes drawBg {
+to {
+    stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fillColor {
+to {
+    fill-opacity: 1;
+    }
+}
+
+@keyframes drawRounded {
+to {
+    opacity: 1;
+    stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fillWhite {
+to {
+    fill-opacity: 1;
+    }
+}
+
