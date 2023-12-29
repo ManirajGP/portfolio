@@ -2,7 +2,7 @@
 
 self.addEventListener('install', (event) => {
     event.waitUntil(
-      caches.open('maniraj_ca-1').then((cache) => {
+      caches.open('maniraj_ca-2').then((cache) => {
         return cache.addAll([
             '/',
             './index.html',
