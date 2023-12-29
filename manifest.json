@@ -1,0 +1,17 @@
+{
+    "name": "Maniraj G Parthasarathy",
+    "short_name": "Maniraj_Portfolio",
+    "description": "A passionated and versatile design enthusiast with a strong foundation in UI/UX, graphic design, and front-end web development.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#232529",
+    "icons": [
+      {
+        "src": "./assets/medias/icons/personalbrand/Manirajicon.svg",
+        "sizes": "192x192",
+        "type": "image/svg+xml"
+      }
+    ]
+  }
+  

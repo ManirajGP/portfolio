@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Interaction Designer & Developer",
   "scripts": {
-    "start": "lite-server --baseDir=\"public\""
+    "start": "lite-server --baseDir=\"./\""
   },
   "keywords": ["Interaction Designer, UI, UX, Adobe CC, Figma, XD, Wordpress, Front End Developer"],
   "author": "Maniraj G. Parthasarathy",

@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Maniraj G. Parthasarathy | Interaction Designer</title>
-    <link rel="icon" href="./assets/medias/icons/FoodLogo.svg" type="image/x-icon">
-    <meta name="description" content="Discover the multifaceted skills of Maniraj G. Parthasarathy, an accomplished interaction designer excelling in the realms of UI/UX design, graphic design, and front-end development. Explore a portfolio that showcases a harmonious blend of creativity and technical expertise.">
+    <meta name="description" content="A passionated and versatile design enthusiast with a strong foundation in UI/UX, graphic design, and front-end web development.">
     <meta name="keywords" content="UI design, UX design, graphic design, front-end development, web design, portfolio, creative design, Maniraj, Parthasarathy, Toronto, Canada">
     <!-- Link to Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -156,8 +155,9 @@
             <h3 class="">Recent Works</h3>
         </section>
         <!-- Link to Portfolios -->
-        <section x-data="{ activeTab: 'uiux' }" class="m-3 mb-0">
+        <section x-data="{ activeTab: 'all' }" class="m-3 mb-0">
             <article class="d-flex flex-wrap btn-group">
+                <button @click="activeTab = 'all'" class="btn btn-outline-secondary m-1 rounded-pill" :class="{ active: activeTab === 'all' }">All</button>
                 <button @click="activeTab = 'uiux'" class="btn btn-outline-secondary m-1 rounded-pill active" :class="{ active: activeTab === 'uiux' }">UI UX</button>
                 <button @click="activeTab = 'graphic'" class="btn btn-outline-secondary m-1 rounded-pill" :class="{ active: activeTab === 'graphic' }">Graphic Design</button>
                 <button @click="activeTab = 'branding'" class="btn btn-outline-secondary m-1 rounded-pill" :class="{ active: activeTab === 'branding' }">Branding</button>
@@ -165,7 +165,7 @@
             </article>
         
             <article class="row justify-content-center align-items-center mt-3">
-                <a x-show="activeTab === 'uiux'" class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 text-decoration-none" href="./portfolio/the-ordinary-app-case-study.html">
+                <a x-show="activeTab === 'all' || activeTab === 'uiux'" class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 text-decoration-none" href="./portfolio/the-ordinary-app-case-study.html">
                     <figure class="p-2 bg-light rounded-5 border text-center">
                         <img class="img-fluid rounded-5 p-1" src="./assets/medias/img/mockups/thumbnail/TheOrdinary.jpg" alt="" />
                         <figcaption class="p-3">
@@ -178,7 +178,7 @@
                     </figure>
                 </a>
 
-                <a x-show="activeTab === 'uiux'" class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 text-decoration-none" href="#">
+                <a x-show="activeTab === 'all' || activeTab === 'uiux'" class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 text-decoration-none" href="#">
                     <figure class="p-2 bg-light rounded-5 border text-center">
                         <img class="img-fluid rounded-5 p-1" src="https://www.wolflair.com/wp-content/uploads/2017/01/placeholder.jpg" alt="" />
                         <figcaption class="p-3">
@@ -191,20 +191,7 @@
                     </figure>
                 </a>
 
-                <a x-show="activeTab === 'uiux'" class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 text-decoration-none" href="#">
-                    <figure class="p-2 bg-light rounded-5 border text-center">
-                        <img class="img-fluid rounded-5 p-1" src="https://www.wolflair.com/wp-content/uploads/2017/01/placeholder.jpg" alt="" />
-                        <figcaption class="p-3">
-                            <h4 class="text-dark text-start fs-5 text-truncate">UI UX</h4>
-                            <p class="text-secondary text-truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <div class="text-end">
-                                <button class="btn btn-outline-dark fw-medium rounded-pill"><i class="bi bi-arrow-right-circle fs-3 p-0"></i></button>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </a>
-
-                <a x-show="activeTab === 'graphic'" class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 text-decoration-none" href="#">
+                <a x-show="activeTab === 'all' || activeTab === 'graphic'" class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 text-decoration-none" href="#">
                     <figure class="p-2 bg-light rounded-5 border text-center">
                         <img class="img-fluid rounded-5 p-1" src="./assets/medias/img/mockups/thumbnail/MusicMastro.jpg" alt="Magazine Design" />
                         <figcaption class="p-3">
@@ -217,7 +204,7 @@
                     </figure>
                 </a>
 
-                <a x-show="activeTab === 'graphic'" class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 text-decoration-none" href="#">
+                <a x-show="activeTab === 'all' || activeTab === 'graphic'" class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 text-decoration-none" href="#">
                     <figure class="p-2 bg-light rounded-5 border text-center">
                         <img class="img-fluid rounded-5 p-1 text-center" src="./assets/medias/img/mockups/thumbnail/AdvancedIcon.jpg" alt="" />
                         <figcaption class="p-3">
@@ -230,7 +217,7 @@
                     </figure>
                 </a>
 
-                <a x-show="activeTab === 'graphic'" class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 text-decoration-none" href="#">
+                <a x-show="activeTab === 'all' || activeTab === 'graphic'" class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 text-decoration-none" href="#">
                     <figure class="p-2 bg-light rounded-5 border text-center">
                         <img class="img-fluid rounded-5 p-1" src="https://www.wolflair.com/wp-content/uploads/2017/01/placeholder.jpg" alt="" />
                         <figcaption class="p-3">
@@ -243,7 +230,7 @@
                     </figure>
                 </a>
 
-                <a x-show="activeTab === 'branding'" class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 text-decoration-none" href="./portfolio/personal-brand-book.html">
+                <a x-show="activeTab === 'all' || activeTab === 'branding'" class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 text-decoration-none" href="./portfolio/personal-brand-book.html">
                     <figure class="p-2 bg-light rounded-5 border text-center">
                         <img class="img-fluid rounded-5 p-1" src="./assets/medias/img/mockups/thumbnail/ManirajBrandBook.jpg" alt="" />
                         <figcaption class="p-3">
@@ -256,7 +243,7 @@
                     </figure>
                 </a>
 
-                <a x-show="activeTab === 'branding'" class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 text-decoration-none" href="#">
+                <a x-show="activeTab === 'all' || activeTab === 'branding'" class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 text-decoration-none" href="#">
                     <figure class="p-2 bg-light rounded-5 border text-center">
                         <img class="img-fluid rounded-5 p-1" src="./assets/medias/img/mockups/thumbnail/PluckyCover.jpg" alt="Branding" />
                         <figcaption class="p-3">
@@ -269,20 +256,7 @@
                     </figure>
                 </a>
 
-                <a x-show="activeTab === 'branding'" class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 text-decoration-none" href="#">
-                    <figure class="p-2 bg-light rounded-5 border text-center">
-                        <img class="img-fluid rounded-5 p-1" src="https://www.wolflair.com/wp-content/uploads/2017/01/placeholder.jpg" alt="" />
-                        <figcaption class="p-3">
-                            <h4 class="text-dark text-start fs-5 text-truncate">Branding</h4>
-                            <p class="text-secondary text-truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <div class="text-end">
-                                <button class="btn btn-outline-dark fw-medium rounded-pill"><i class="bi bi-arrow-right-circle fs-3 p-0"></i></button>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </a>
-
-                <a x-show="activeTab === 'web'" class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 text-decoration-none" href="https://apexconstructioncbe.com/" target="_blank" rel="nofollow">
+                <a x-show="activeTab === 'all' || activeTab === 'web'" class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 text-decoration-none" href="https://apexconstructioncbe.com/" target="_blank" rel="nofollow">
                     <figure class="p-2 bg-light rounded-5 border text-center">
                         <img class="img-fluid rounded-5 p-1" src="./assets/medias/img/mockups/thumbnail/ApexConstruction.jpg" alt="Apex Construction website image" />
                         <figcaption class="p-3">
@@ -295,7 +269,7 @@
                     </figure>
                 </a>
 
-                <a x-show="activeTab === 'web'" class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 text-decoration-none" href="https://jagamart.in/" target="_blank" rel="nofollow">
+                <a x-show="activeTab === 'all' || activeTab === 'web'" class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 text-decoration-none" href="https://jagamart.in/" target="_blank" rel="nofollow">
                     <figure class="p-2 bg-light rounded-5 border text-center">
                         <img class="img-fluid rounded-5 p-1" src="./assets/medias/img/mockups/thumbnail/Jagamart.jpg" alt="" />
                         <figcaption class="p-3">
@@ -308,7 +282,7 @@
                     </figure>
                 </a>
 
-                <a x-show="activeTab === 'web'" class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 text-decoration-none" href="#">
+                <a x-show="activeTab === 'all' || activeTab === 'web'" class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 text-decoration-none" href="#">
                     <figure class="p-2 bg-light rounded-5 border text-center">
                         <img class="img-fluid rounded-5 p-1" src="https://www.wolflair.com/wp-content/uploads/2017/01/placeholder.jpg" alt="" />
                         <figcaption class="p-3">
